@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dev.favian</groupId>
+  <artifactId>bitbytebot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>BitByteBot</name>
+  <description>A simple Discord bot built in Java using JDA</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>21</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+<dependencies>
+    <!-- JDA -->
+    <dependency>
+        <groupId>net.dv8tion</groupId>
+        <artifactId>JDA</artifactId>
+        <version>5.0.0-beta.20</version>
+    </dependency>
+
+    <!-- SLF4J (per logging) -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>2.0.7</version>
+    </dependency>
+
+    <!-- Trove4j (richiesta interna da JDA) -->
+    <dependency>
+        <groupId>net.sf.trove4j</groupId>
+        <artifactId>trove4j</artifactId>
+        <version>3.0.3</version>
+    </dependency>
+
+    <!-- Kotlin stdlib (JDA lo usa internamente) -->
+    <dependency>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-stdlib</artifactId>
+        <version>1.9.22</version>
+    </dependency>
+
+    <!-- WebSocket client (necessario per JDA) -->
+    <dependency>
+        <groupId>com.neovisionaries</groupId>
+        <artifactId>nv-websocket-client</artifactId>
+        <version>2.14</version>
+    </dependency>
+</dependencies>
+</project>
