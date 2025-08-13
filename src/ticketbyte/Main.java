@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        JDA jda = JDABuilder.createDefault("YOUR_DISCORD_BOT_TOKEN")		//discord developers bot token
+        JDA jda = JDABuilder.createDefault("TOKEN")		//discord developers bot token
         		  .enableIntents(   GatewayIntent.GUILD_MEMBERS,
         				    		GatewayIntent.GUILD_PRESENCES,
         				    		GatewayIntent.GUILD_MESSAGES,
@@ -26,7 +26,7 @@ public class Main {
         if (testGuild != null) {
             testGuild.updateCommands().addCommands(
             	    Commands.slash("command", "desc")
-            	        .addOption(OptionType.USER, "name of variable", "desc", false)
+            	      //  .addOption(OptionType.USER, "name of variable", "desc", false)
 
             ).queue();
             System.out.println("Commands saved");
