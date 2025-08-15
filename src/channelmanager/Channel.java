@@ -109,9 +109,9 @@ public class Channel {
 	}
 	
 	public void interactions(ButtonInteractionEvent event, String idbutton) {
-		
-		PermissionCheck.checkbutton(event);
-		
+	
+		if(PermissionCheck.checkbutton(event) == false) return;
+
 		String mention = event.getUser().getAsMention();
 	    String botIcon     = event.getJDA().getSelfUser().getEffectiveAvatarUrl();
 		
