@@ -34,6 +34,5 @@ public class CreateTicket {
 					Button.secondary("3", "GENERAL HELP").withEmoji(Emoji.fromUnicode("📚")),
 					Button.success("4", "DONATION / PURCHASE").withEmoji(Emoji.fromUnicode("💳"))
 				).queue();
-		
 	}
 }

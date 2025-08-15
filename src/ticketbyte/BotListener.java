@@ -22,9 +22,13 @@ public class BotListener extends ListenerAdapter{
     @Override
     public void onButtonInteraction(ButtonInteractionEvent event) {
     	
+    	String buttonID = event.getComponentId();
     	System.out.println("Bottone Cliccato");
     	
-    	event.reply("Hai aperto un ticket!").setEphemeral(true).queue();
-    	channel.create(event);
+    	if(Integer.parseInt(buttonID) < 4) {	//4 is the number of option in the ticket panel
+    		channel.create(event, buttonID);		
+    		event.reply("Hai aperto un ticket!").setEphemeral(true).queue();
+    	}
+    	else	channel.interactions(event, buttonID);
     }
 }
