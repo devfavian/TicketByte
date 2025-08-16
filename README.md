@@ -1,23 +1,22 @@
 # TicketByte 🎫
 
 TicketByte is a lightweight Discord bot built in **Java** using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.  
-Originally created as a learning project, it now includes ticket management, moderation, and utility commands.
+Originally created as a learning project, now includes a complete and functional ticket management system.
 
-> **Project status:** 🟢 **Active Development** — The bot is under constant updates and new features are being added regularly.
+> **Project status:** 🟢 **Stable** • ⚠️ **Maintenance mode** — Active development has slowed down as I’m focusing on other projects.  
+> The bot is still hosted on a private VPS and fully functional. You can [invite it to your server](https://discord.com/oauth2/authorize?client_id=1405217920887554080&permissions=268823568&integration_type=0&scope=applications.commands+bot) or contact me for upgrades, tips, or issue reports.
+
 ---
 
 ## ✨ Features
 
 - **Ticket System** → Create and manage private support tickets
-- **Moderation Tools** → `coming soon...`
-- **Utility Commands** → `coming soon...`
-- **Customizable Responses** → `coming soon...`
 
 ---
 
 ## 📜 Commands
 
-- **Coming Soon...**
+- ``/createticketpanel`` → create the ticket panel
 
 ---
 
@@ -48,23 +47,22 @@ No license specified yet. You are free to use, modify, and contribute for now.
 ## 🎯 Italiano
 
 TicketByte è un bot Discord scritto in **Java** con la libreria [JDA](https://github.com/DV8FromTheWorld/JDA).  
-Nato come progetto di apprendimento, ora include un sistema di ticket, moderazione e comandi utili.
+Nato come progetto di apprendimento, ora include un sistema di gestione dei ticket completo e funzionale.
 
-> **Stato progetto:** 🟢 **In pieno sviluppo** — Il bot è costantemente aggiornato e vengono aggiunte nuove funzionalità con frequenza.  
+> **Stato progetto:** 🟢 **Stabile** • ⚠️ **Modalità manutenzione** — Lo sviluppo attivo è rallentato per concentrarmi su altri progetti.  
+> Il bot è ancora ospitato su una VPS privata ed è completamente funzionante. Puoi [invitarlo nel tuo server](https://discord.com/oauth2/authorize?client_id=1405217920887554080&permissions=268823568&integration_type=0&scope=applications.commands+bot) o contattarmi per aggiornamenti, consigli o segnalazioni.
+
 ---
 
 ### ✨ Funzionalità
 
 - **Sistema ticket** → Crea e gestisci ticket di supporto privati
-- **Strumenti di moderazione** → `in arrivo...`,
-- **Comandi di utilità** → `in arrivo...`,
-- **Risposte personalizzabili** → `in arrivo...`,
 
 ---
 
 ### 📜 Comandi
 
-- **In Arrivo...**
+- ``/createticketpanel`` → crea il pannello per la gestione dei ticket
 
 ---
 

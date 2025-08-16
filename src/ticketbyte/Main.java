@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        JDA jda = JDABuilder.createDefault("TOKEN")		//discord developers bot token
+        JDA jda = JDABuilder.createDefault("YOUR_DISCORD_BOT_TOKEN")		//discord developers bot token
         		  .enableIntents(   GatewayIntent.GUILD_MEMBERS,
         				    		GatewayIntent.GUILD_PRESENCES,
         				    		GatewayIntent.GUILD_MESSAGES,
@@ -18,20 +18,25 @@ public class Main {
                   .build()
         		  .awaitReady();
         
-        //testing
+        //MODES
         
-        String guildid = "1057987584938233866";		//enable developer mode on discord -> right click on your discord server -> "copy ID"
-        Guild testGuild = jda.getGuildById(guildid);
+ boolean DEV_MODE = false;
+        
+        if(DEV_MODE) {
+        	String guildid = "1057987584938233866";		//enable developer mode on discord -> right click on your discord server -> "copy ID"
+            Guild testGuild = jda.getGuildById(guildid);
         
         if (testGuild != null) {
             testGuild.updateCommands().addCommands(
-            	    Commands.slash("command", "desc")
-            	      //  .addOption(OptionType.USER, "name of variable", "desc", false)
-
+            	    Commands.slash("createticketpanel", "create ticket panel")
             ).queue();
-            System.out.println("Commands saved");
+            System.out.println("Guild commands saved (DEV_MODE)");
+        }
         } else {
-            System.out.println("Guild not found. Check your guildid");
+        	jda.updateCommands().addCommands(
+        			Commands.slash("createticketpanel", "create ticket panel")
+        	).queue();
+        	System.out.println("Global commands saved (PROD_MODE)");
         }
     }
 }
