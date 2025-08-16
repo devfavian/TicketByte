@@ -30,8 +30,9 @@ public class Channel {
 		
 		
 		channel
-		.addPermissionOverride(everyone, null, EnumSet.of(Permission.VIEW_CHANNEL))
-		.addPermissionOverride(rolename, EnumSet.of(Permission.VIEW_CHANNEL), null)
+		.addPermissionOverride(everyone, null, EnumSet.of(Permission.VIEW_CHANNEL))		//remove role
+		.addPermissionOverride(rolename, EnumSet.of(Permission.VIEW_CHANNEL), null)		//add role
+		.addPermissionOverride(event.getMember(), EnumSet.of(Permission.VIEW_CHANNEL, Permission.MESSAGE_SEND, Permission.MESSAGE_ATTACH_FILES, Permission.MESSAGE_ADD_REACTION), null)		//add permission to the one that opened the ticke
 		.queue(((TextChannel created) -> {
 			String id = created.getId();
 			Channel.message(event, id, idbutton);

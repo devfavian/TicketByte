@@ -15,7 +15,7 @@ public class BotListener extends ListenerAdapter{
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
     	
     	switch (event.getName()) {
-    	case "command" -> ticket.handle(event);
+    	case "createticketpanel" -> ticket.handle(event);
     	}
     }
     

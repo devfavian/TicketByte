@@ -6,9 +6,12 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
+import utils.PermissionCheck;
 
 public class CreateTicket {
 	public void handle(SlashCommandInteractionEvent event) {
+		
+		if(PermissionCheck.checkslash(event) == false) return;
 		
 		EmbedBuilder embed = new EmbedBuilder();
 		embed.setColor(Color.BLACK);
