@@ -25,7 +25,7 @@ public class BotListener extends ListenerAdapter{
     	String buttonID = event.getComponentId();
     	System.out.println("Bottone Cliccato");
     	
-    	if(Integer.parseInt(buttonID) < 4) {	//4 is the number of option in the ticket panel
+    	if(Integer.parseInt(buttonID) <= 4) {	//4 is the number of option in the ticket panel
     		channel.create(event, buttonID);		
     		event.reply("Hai aperto un ticket!").setEphemeral(true).queue();
     	}
