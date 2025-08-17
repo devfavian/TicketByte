@@ -40,7 +40,9 @@ Originally created as a learning project, now includes a complete and functional
 
 ### License
 
-No license specified yet. You are free to use, modify, and contribute for now.
+TicketByte © All rights reserved.  
+This project is provided for personal and educational use only.  
+Commercial use, redistribution, or deploying this bot on public/community servers without explicit permission is strictly prohibited.
 
 ---
 
